@@ -1,3 +1,4 @@
+require "chromedriver-helper"
 require "selenium-webdriver"
 
 options = Selenium::WebDriver::Chrome::Options.new
