@@ -18,4 +18,4 @@ WORKDIR /
 RUN rm -rf /noto
 
 RUN gem install selenium-webdriver
-RUN gem install chromedriver-helper
+RUN gem install webdrivers
