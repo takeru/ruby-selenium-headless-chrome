@@ -1,4 +1,4 @@
-require "chromedriver-helper"
+require "webdrivers/chromedriver"
 require "selenium-webdriver"
 
 options = Selenium::WebDriver::Chrome::Options.new
@@ -14,5 +14,5 @@ driver = Selenium::WebDriver.for :chrome, options: options
 driver.get "https://www.nict.go.jp/JST/JST5.html"
 sleep 1
 ts = Time.now.strftime("%Y%m%d_%H%M%S")
-driver.save_screenshot("/data/jst_#{ts}.png")
+driver.save_screenshot("/data/sample/jst_#{ts}.png")
 driver.quit
