@@ -1,3 +1,4 @@
+wget https://noto-website.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
 
 cd ruby-selenium-headless-chrome
 

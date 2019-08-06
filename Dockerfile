@@ -7,7 +7,7 @@ RUN set -x && \
   dpkg -i google-chrome*.deb || apt update && apt-get install -f -y
 
 RUN mkdir /noto
-ADD https://noto-website.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip /noto
+ADD NotoSansCJKjp-hinted.zip /noto
 WORKDIR /noto
 RUN unzip NotoSansCJKjp-hinted.zip && \
     mkdir -p /usr/share/fonts/noto && \
@@ -19,3 +19,8 @@ RUN rm -rf /noto
 
 RUN gem install selenium-webdriver
 RUN gem install webdrivers
+
+RUN apt-get install -y xvfb
+ENV TZ='Asia/Tokyo'
+RUN apt-get -y install task-japanese locales-all
+ENV LANG=ja_JP.UTF-8
