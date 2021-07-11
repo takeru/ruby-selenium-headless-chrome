@@ -1,4 +1,4 @@
-FROM ruby:2.5.1-stretch
+FROM ruby:3.0.2-buster
 
 RUN set -x && \
   apt-get update && \
